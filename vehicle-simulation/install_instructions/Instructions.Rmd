@@ -1,0 +1,137 @@
+---
+title: "Instructions for Windows OS"
+output: pdf_document
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Install python
+
+[Python Download link](www.python.org/downloads/windows/) (python3 is preferred)
+
+You can check if you installed it or not by typing following in the command console:
+
+```
+python --version
+```
+
+If you've already installed it, it'll show the current version of it.
+
+***
+
+## 2. Install Pip  (It's used to install other dependencies)
+
+(1) First check if Pip is already installed, run following command in the command console:
+
+```
+pip --version
+```
+
+If Pip responds, then Pip is installed; if there's an error saying this could not be found then it isn't.
+
+(2) Before installing Pip, you'll need to download [get-pip.py](https://bootstrap.pypa.io/get-pip.py). You can download the file to anywhere but remember where it's been saved.
+
+(3) Then launch windows command line:
+
+* Press Windows Key + X.
+
+* Click on “Run.”
+
+* Type in “cmd.exe” and hit enter.
+
+Alternatively, type “cmd.exe” in the Windows search bar and click on “Command Prompt.”
+
+
+(4)
+
+Open the Command Console if it isn’t already open. Under the Windows command console, cd is the function to change directories. Use *cd* followed by a directory to navigate to the get-pip.py file.
+
+To install PIP type in the following:
+
+```
+python get-pip.py
+
+```
+
+PIP should install itself. After installing it, you can check the version of pip by doing step1.
+
+ ***
+
+## 3. Install pygame, numpy and Cython
+
+```
+pip install pygame
+
+```
+
+```
+pip install numpy
+
+```
+
+```
+pip install Cython
+
+```
+
+ ***
+
+## 4. Install kivy (we need gstreamer, glew, sdl2)
+
+* Install the dependencies 
+
+```
+python -m pip install --upgrade pip wheel setuptools
+python -m pip install docutils pygments pypiwin32 kivy_deps.sdl2==0.1.22 kivy_deps.glew==0.1.12
+python -m pip install kivy_deps.gstreamer==0.1.17
+python -m pip install kivy_deps.angle==0.1.9
+
+```
+
+ * install kivy
+ ```
+ python -m pip install kivy==1.11.1
+ ```
+ 
+ * (Optionally) Install the kivy examples
+ ```
+ python -m pip install kivy_examples==1.11.1
+ ```
+
+Now you should now be able to import kivy in python.
+
+ ***
+
+## 5. Link MATLAB and Python
+
+[Install MATLAB Engine API for python](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
+
+Open the python folder (inside the MATLAB) in the command console,
+```
+cd "matlabroot\extern\engines\python"
+```
+Then execute the python file,
+
+```
+python setup.py install
+```
+
+## 6. Common circumstances that would happen 
+
+Note: If you encounter any **permission denied** errors, try opening the [Command prompt as administrator](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc947813(v=ws.10)) and try again.
+
+If you have multiple versions of MATLAB installed on your computer, I recommend that you only keep only one version to avoid potential issues.
+
+## 7. Run main.py of car3D
+
+After finishing above steps, now you should be able to compile the main.py for car3D. Using *cd* to the car3D folder in the command console and simply do
+
+```
+python main.py
+```
+
+
+
