@@ -9,3 +9,8 @@ Position responsibilities: I will help professor develop software for animations
 Continue doing reserach job with professor Rajesh
 
 9/12 Task: Edit the installer.py to set the environment for running car3D software
+
+
+# 2020SpringRA
+
+Finish simulating for single car, continue working on multiple cars version
